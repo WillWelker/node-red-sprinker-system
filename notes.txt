@@ -1,0 +1,37 @@
+Pi Network Setup Notes
+
+
+
+Start Chromium on boot:
+
+		Edit this file on you Pi terminal or ssh to your Pi
+		
+		sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+		
+		
+		@lxpanel --profile LXDE-pi
+		@pcmanfm --desktop --profile LXDE-pi
+		@xscreensaver -no-splash
+		point-rpi
+		
+		And add this:
+		
+		
+		/usr/bin/chromium-browser --start-fullscreen --disable-restore-session-state
+
+Motion Setup:
+		sudo apt install motion
+		sudo nano /etc/motion/motion.conf # main settings
+		sudo nano /etc/default/motion     # set start on boot to ON
+		
+		Browser camera stream: http://192.168.1.111:8081
+		
+		omxplayer stream from comand line:
+		
+		omxplayer http://192.168.1.111:8081/videostream.cgi
+		can be called from node-red command node
+
+espeak
+		sudo apt install espeak
+		usage on Ubuntu: espeak "hello world"
+		usage on Pi:     espeak --stdout "hello world" | aplay
