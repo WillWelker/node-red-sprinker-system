@@ -64,7 +64,7 @@ module.exports = {
 
     // To enabled pretty-printing of the flow within the flow file, set the following
     //  property to true:
-    //flowFilePretty: true,
+    flowFilePretty: true,
 
     // By default, credentials are encrypted in storage using a generated key. To
     // specify your own secret, set the following property.
@@ -100,7 +100,7 @@ module.exports = {
     // When httpAdminRoot is used to move the UI to a different root path, the
     // following property can be used to identify a directory of static content
     // that should be served at http://localhost:1880/.
-    httpStatic: '/home/pi/Desktop/',
+    httpStatic: '/home/pi/static/',
 
     // The maximum size of HTTP request that will be accepted by the runtime api.
     // Default: 5mb
@@ -207,6 +207,17 @@ module.exports = {
         // octalbonescript:require('octalbonescript'),
         // jfive:require("johnny-five"),
         // j5board:require("johnny-five").Board({repl:false})
+    },
+    
+    // Context Storage
+    // The following property can be used to enable context storage. The configuration
+    // provided here will enable file-based context that flushes to disk every 30 seconds.
+    // Refer to the documentation for further options: https://nodered.org/docs/api/context/
+    //
+    contextStorage: {
+        storeInFile: {
+            module:"localfilesystem"
+        },
     },
 
     // The following property can be used to order the categories in the editor
