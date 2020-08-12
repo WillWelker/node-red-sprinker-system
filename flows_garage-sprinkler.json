@@ -7,6 +7,58 @@
         "info": ""
     },
     {
+        "id": "95458cff.f3d7f",
+        "type": "group",
+        "z": "f25cd622.40f3a8",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "ae60ac8d.66a61",
+            "9705ba47.55e1a8",
+            "7ae50bdc.246794",
+            "6440f8cf.a5cac8",
+            "e0dd73d1.412a5",
+            "ab480505.fa67c8",
+            "a90e16e7.e29318",
+            "1544eaad.ad2b85",
+            "5c83f926.f47588",
+            "e3b2512.a4d5cb",
+            "28a08bae.9e6734",
+            "542e90bb.f6598",
+            "339dc0be.ba3c7",
+            "5164acc.9eb3c54",
+            "e85970f9.b425b",
+            "fbedc6cb.3e7bf8",
+            "e248ae5.c51645",
+            "4a9ebb27.211f54",
+            "b7e1093c.fb0d68",
+            "8432a345.f4b13",
+            "a43414d1.ced728",
+            "1ac201e.fa0f2fe",
+            "2e815779.ac9958",
+            "1ffc571f.6e6f49",
+            "b9b9d9d6.e572e8",
+            "c5f2f2db.76537",
+            "14449d0b.6843f3",
+            "e32786ae.3d2f18",
+            "ed15e7db.d3e488",
+            "cdad58ab.f86cb8",
+            "ca987a59.347478",
+            "e9139c8a.d31fa"
+        ],
+        "x": 34,
+        "y": 639,
+        "w": 712,
+        "h": 462
+    },
+    {
         "id": "31d87628.4e2f2a",
         "type": "mqtt-broker",
         "z": "",
@@ -266,8 +318,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1920,
-        "y": 1280,
+        "x": 2040,
+        "y": 1300,
         "wires": []
     },
     {
@@ -280,8 +332,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1930,
-        "y": 580,
+        "x": 2050,
+        "y": 600,
         "wires": []
     },
     {
@@ -294,8 +346,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1930,
-        "y": 480,
+        "x": 2050,
+        "y": 500,
         "wires": []
     },
     {
@@ -308,8 +360,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1940,
-        "y": 1120,
+        "x": 2060,
+        "y": 1140,
         "wires": []
     },
     {
@@ -322,8 +374,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1930,
-        "y": 680,
+        "x": 2050,
+        "y": 700,
         "wires": []
     },
     {
@@ -336,8 +388,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1920,
-        "y": 1020,
+        "x": 2040,
+        "y": 1040,
         "wires": []
     },
     {
@@ -350,8 +402,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1910,
-        "y": 980,
+        "x": 2030,
+        "y": 1000,
         "wires": []
     },
     {
@@ -364,14 +416,15 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1930,
-        "y": 780,
+        "x": 2050,
+        "y": 800,
         "wires": []
     },
     {
         "id": "ae60ac8d.66a61",
         "type": "ui_numeric",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Time-set 8",
         "label": "Garage - Swingset Area 8 --  Set Time",
         "tooltip": "",
@@ -386,8 +439,8 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "x": 450,
-        "y": 740,
+        "x": 490,
+        "y": 680,
         "wires": [
             [
                 "7ae50bdc.246794"
@@ -406,8 +459,8 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1770,
-        "y": 500,
+        "x": 1890,
+        "y": 520,
         "wires": []
     },
     {
@@ -428,8 +481,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 460,
+        "x": 1250,
+        "y": 480,
         "wires": [
             [
                 "24787281.d7d72e"
@@ -444,8 +497,8 @@
         "func": "var g = global.get(\"sp8\") + 1;\nglobal.set(\"sp8Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 460,
+        "x": 1490,
+        "y": 480,
         "wires": [
             [
                 "63142595.2dde8c"
@@ -460,8 +513,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp8Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp8Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1590,
-        "y": 500,
+        "x": 1710,
+        "y": 520,
         "wires": [
             [
                 "44bf599f.8a7778",
@@ -512,13 +565,13 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "Monday",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "00 12 * * 1",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 1270,
         "y": 80,
         "wires": [
@@ -560,12 +613,15 @@
         "id": "9705ba47.55e1a8",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Get 8",
-        "func": "\n\nmsg.payload = flow.get(\"s8\", \"storeInFile\");\n\nreturn msg;",
+        "func": "\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
-        "y": 740,
+        "initialize": "// Code added here will be run once\n// whenever the node is deployed.\n\nmsg.payload = flow.get(\"s8\", \"storeInFile\");\n\nreturn msg;",
+        "finalize": "",
+        "x": 330,
+        "y": 680,
         "wires": [
             [
                 "ae60ac8d.66a61"
@@ -576,12 +632,13 @@
         "id": "7ae50bdc.246794",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Store 8",
         "func": "// sp8Remaining ticking down global variable\n// sp8 time setting for zone, stored in file\n\n\n// store in file to survive restart\nflow.set(\"s8\", msg.payload, \"storeInFile\");\n\n\n// store in global for calculations\nglobal.set(\"sp8\",msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 620,
-        "y": 740,
+        "x": 660,
+        "y": 680,
         "wires": [
             []
         ]
@@ -610,13 +667,13 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "Git",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "86400",
         "crontab": "",
         "once": false,
         "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 190,
         "y": 80,
         "wires": [
@@ -655,13 +712,13 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "REBOOT",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 860,
         "y": 80,
         "wires": [
@@ -695,27 +752,36 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2070,
-        "y": 460,
+        "x": 2190,
+        "y": 480,
         "wires": []
     },
     {
         "id": "6440f8cf.a5cac8",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
-        "x": 110,
-        "y": 880,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 820,
         "wires": [
             [
-                "9705ba47.55e1a8",
                 "e0dd73d1.412a5",
                 "1544eaad.ad2b85",
                 "28a08bae.9e6734",
@@ -723,7 +789,8 @@
                 "e248ae5.c51645",
                 "8432a345.f4b13",
                 "2e815779.ac9958",
-                "ed15e7db.d3e488"
+                "ed15e7db.d3e488",
+                "9705ba47.55e1a8"
             ]
         ]
     },
@@ -732,15 +799,15 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "1 minute inject",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 1360,
-        "y": 880,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1480,
+        "y": 900,
         "wires": [
             [
                 "63142595.2dde8c",
@@ -772,8 +839,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 500,
+        "x": 1250,
+        "y": 520,
         "wires": [
             [
                 "782c5e8c.78f3"
@@ -788,8 +855,8 @@
         "func": "\nglobal.set(\"sp8Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 500,
+        "x": 1490,
+        "y": 520,
         "wires": [
             [
                 "63142595.2dde8c"
@@ -800,12 +867,13 @@
         "id": "e0dd73d1.412a5",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Get 7",
         "func": "\n\nmsg.payload = flow.get(\"s7\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
-        "y": 780,
+        "x": 330,
+        "y": 720,
         "wires": [
             [
                 "ab480505.fa67c8"
@@ -816,6 +884,7 @@
         "id": "ab480505.fa67c8",
         "type": "ui_numeric",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Time-set 7",
         "label": "Back Wall of House 7 --  Set Time",
         "tooltip": "",
@@ -830,8 +899,8 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "x": 450,
-        "y": 780,
+        "x": 490,
+        "y": 720,
         "wires": [
             [
                 "a90e16e7.e29318"
@@ -856,8 +925,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 560,
+        "x": 1250,
+        "y": 580,
         "wires": [
             [
                 "773c9b69.95c0b4"
@@ -882,8 +951,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 600,
+        "x": 1250,
+        "y": 620,
         "wires": [
             [
                 "e95ea8d6.db4a58"
@@ -902,8 +971,8 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1770,
-        "y": 600,
+        "x": 1890,
+        "y": 620,
         "wires": []
     },
     {
@@ -931,20 +1000,21 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2070,
-        "y": 560,
+        "x": 2190,
+        "y": 580,
         "wires": []
     },
     {
         "id": "a90e16e7.e29318",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Store 7",
         "func": "// sp8Remaining ticking down global variable\n// sp8 time setting for zone, stored in file\n\n\n// store in file to survive restart\nflow.set(\"s7\", msg.payload, \"storeInFile\");\n\n\n// store in global for calculations\nglobal.set(\"sp7\",msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 620,
-        "y": 780,
+        "x": 660,
+        "y": 720,
         "wires": [
             []
         ]
@@ -957,8 +1027,8 @@
         "func": "var g = global.get(\"sp7\") + 1;\nglobal.set(\"sp7Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 560,
+        "x": 1490,
+        "y": 580,
         "wires": [
             [
                 "f5002618.b97468"
@@ -973,8 +1043,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp7Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp7Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1590,
-        "y": 600,
+        "x": 1710,
+        "y": 620,
         "wires": [
             [
                 "de54a589.a4b5a8",
@@ -993,8 +1063,8 @@
         "func": "\nglobal.set(\"sp7Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 600,
+        "x": 1490,
+        "y": 620,
         "wires": [
             [
                 "f5002618.b97468"
@@ -1005,12 +1075,13 @@
         "id": "1544eaad.ad2b85",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Get 6",
         "func": "\n\nmsg.payload = flow.get(\"s6\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
-        "y": 820,
+        "x": 330,
+        "y": 760,
         "wires": [
             [
                 "5c83f926.f47588"
@@ -1021,6 +1092,7 @@
         "id": "5c83f926.f47588",
         "type": "ui_numeric",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Time-set 6",
         "label": "East Side Hill 6 -- Set Time",
         "tooltip": "",
@@ -1035,8 +1107,8 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "x": 450,
-        "y": 820,
+        "x": 490,
+        "y": 760,
         "wires": [
             [
                 "e3b2512.a4d5cb"
@@ -1061,8 +1133,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 660,
+        "x": 1250,
+        "y": 680,
         "wires": [
             [
                 "e7b87641.6ab998"
@@ -1087,8 +1159,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 700,
+        "x": 1250,
+        "y": 720,
         "wires": [
             [
                 "5786d088.13b6d"
@@ -1107,8 +1179,8 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1770,
-        "y": 700,
+        "x": 1890,
+        "y": 720,
         "wires": []
     },
     {
@@ -1136,20 +1208,21 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2070,
-        "y": 660,
+        "x": 2190,
+        "y": 680,
         "wires": []
     },
     {
         "id": "e3b2512.a4d5cb",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Store 6",
         "func": "// sp8Remaining ticking down global variable\n// sp8 time setting for zone, stored in file\n\n\n// store in file to survive restart\nflow.set(\"s6\", msg.payload, \"storeInFile\");\n\n\n// store in global for calculations\nglobal.set(\"sp6\",msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 620,
-        "y": 820,
+        "x": 660,
+        "y": 760,
         "wires": [
             []
         ]
@@ -1162,8 +1235,8 @@
         "func": "var g = global.get(\"sp6\") + 1;\nglobal.set(\"sp6Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 660,
+        "x": 1490,
+        "y": 680,
         "wires": [
             [
                 "f38b3234.1ca"
@@ -1178,8 +1251,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp6Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp6Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1590,
-        "y": 700,
+        "x": 1710,
+        "y": 720,
         "wires": [
             [
                 "c92a09d7.7be338",
@@ -1198,8 +1271,8 @@
         "func": "\nglobal.set(\"sp6Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 700,
+        "x": 1490,
+        "y": 720,
         "wires": [
             [
                 "f38b3234.1ca"
@@ -1231,8 +1304,8 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2070,
-        "y": 760,
+        "x": 2190,
+        "y": 780,
         "wires": []
     },
     {
@@ -1260,8 +1333,8 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2070,
-        "y": 960,
+        "x": 2190,
+        "y": 980,
         "wires": []
     },
     {
@@ -1289,8 +1362,8 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2070,
-        "y": 1100,
+        "x": 2190,
+        "y": 1120,
         "wires": []
     },
     {
@@ -1318,8 +1391,8 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2070,
-        "y": 1100,
+        "x": 2190,
+        "y": 1120,
         "wires": []
     },
     {
@@ -1347,20 +1420,21 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2030,
-        "y": 1260,
+        "x": 2150,
+        "y": 1280,
         "wires": []
     },
     {
         "id": "28a08bae.9e6734",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Get 5",
         "func": "\n\nmsg.payload = flow.get(\"s5\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
-        "y": 860,
+        "x": 330,
+        "y": 800,
         "wires": [
             [
                 "542e90bb.f6598"
@@ -1371,6 +1445,7 @@
         "id": "542e90bb.f6598",
         "type": "ui_numeric",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Time-set 5",
         "label": "Line 5 -- Set Time",
         "tooltip": "",
@@ -1385,8 +1460,8 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "x": 450,
-        "y": 860,
+        "x": 490,
+        "y": 800,
         "wires": [
             [
                 "339dc0be.ba3c7"
@@ -1411,8 +1486,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 760,
+        "x": 1250,
+        "y": 780,
         "wires": [
             [
                 "6964673b.615bf8"
@@ -1437,8 +1512,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 800,
+        "x": 1250,
+        "y": 820,
         "wires": [
             [
                 "eab7faf2.8b96e8"
@@ -1457,20 +1532,21 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1770,
-        "y": 800,
+        "x": 1890,
+        "y": 820,
         "wires": []
     },
     {
         "id": "339dc0be.ba3c7",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Store 5",
         "func": "// sp8Remaining ticking down global variable\n// sp8 time setting for zone, stored in file\n\n\n// store in file to survive restart\nflow.set(\"s5\", msg.payload, \"storeInFile\");\n\n\n// store in global for calculations\nglobal.set(\"sp5\",msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 620,
-        "y": 860,
+        "x": 660,
+        "y": 800,
         "wires": [
             []
         ]
@@ -1483,8 +1559,8 @@
         "func": "var g = global.get(\"sp5\") + 1;\nglobal.set(\"sp5Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 760,
+        "x": 1490,
+        "y": 780,
         "wires": [
             [
                 "fae8f340.280a5"
@@ -1499,8 +1575,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp5Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp5Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1590,
-        "y": 800,
+        "x": 1710,
+        "y": 820,
         "wires": [
             [
                 "12409451.a9bb6c",
@@ -1519,8 +1595,8 @@
         "func": "\nglobal.set(\"sp5Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 800,
+        "x": 1490,
+        "y": 820,
         "wires": [
             [
                 "fae8f340.280a5"
@@ -1531,12 +1607,13 @@
         "id": "5164acc.9eb3c54",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Get 4",
         "func": "\n\nmsg.payload = flow.get(\"s4\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
-        "y": 900,
+        "x": 330,
+        "y": 840,
         "wires": [
             [
                 "e85970f9.b425b"
@@ -1547,6 +1624,7 @@
         "id": "e85970f9.b425b",
         "type": "ui_numeric",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Time-set 4",
         "label": "Back Patio 4 -- Set Time",
         "tooltip": "",
@@ -1561,8 +1639,8 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "x": 450,
-        "y": 900,
+        "x": 490,
+        "y": 840,
         "wires": [
             [
                 "fbedc6cb.3e7bf8"
@@ -1587,8 +1665,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 960,
+        "x": 1250,
+        "y": 980,
         "wires": [
             [
                 "d1cf668d.fdca18"
@@ -1613,8 +1691,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 1000,
+        "x": 1250,
+        "y": 1020,
         "wires": [
             [
                 "f06bbd77.0022a"
@@ -1633,20 +1711,21 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1770,
-        "y": 1000,
+        "x": 1890,
+        "y": 1020,
         "wires": []
     },
     {
         "id": "fbedc6cb.3e7bf8",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Store 4",
         "func": "// sp8Remaining ticking down global variable\n// sp8 time setting for zone, stored in file\n\n\n// store in file to survive restart\nflow.set(\"s4\", msg.payload, \"storeInFile\");\n\n\n// store in global for calculations\nglobal.set(\"sp4\",msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 620,
-        "y": 900,
+        "x": 660,
+        "y": 840,
         "wires": [
             []
         ]
@@ -1659,8 +1738,8 @@
         "func": "var g = global.get(\"sp4\") + 1;\nglobal.set(\"sp4Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1360,
-        "y": 960,
+        "x": 1480,
+        "y": 980,
         "wires": [
             [
                 "9adcb962.613b48"
@@ -1675,8 +1754,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp4Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp4Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1590,
-        "y": 1000,
+        "x": 1710,
+        "y": 1020,
         "wires": [
             [
                 "c8b3b04b.2363d",
@@ -1695,8 +1774,8 @@
         "func": "\nglobal.set(\"sp4Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 1000,
+        "x": 1490,
+        "y": 1020,
         "wires": [
             [
                 "9adcb962.613b48"
@@ -1707,12 +1786,13 @@
         "id": "e248ae5.c51645",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Get 3",
         "func": "\n\nmsg.payload = flow.get(\"s3\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
-        "y": 940,
+        "x": 330,
+        "y": 880,
         "wires": [
             [
                 "4a9ebb27.211f54"
@@ -1723,6 +1803,7 @@
         "id": "4a9ebb27.211f54",
         "type": "ui_numeric",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Time-set 3",
         "label": "Line 3 -- Set Time",
         "tooltip": "",
@@ -1737,8 +1818,8 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "x": 450,
-        "y": 940,
+        "x": 490,
+        "y": 880,
         "wires": [
             [
                 "b7e1093c.fb0d68"
@@ -1763,8 +1844,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 1060,
+        "x": 1250,
+        "y": 1080,
         "wires": [
             [
                 "de10d37.8d4fb3"
@@ -1789,8 +1870,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 1100,
+        "x": 1250,
+        "y": 1120,
         "wires": [
             [
                 "48bf5457.973b1c"
@@ -1809,20 +1890,21 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1770,
-        "y": 1100,
+        "x": 1890,
+        "y": 1120,
         "wires": []
     },
     {
         "id": "b7e1093c.fb0d68",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Store 3",
         "func": "// sp8Remaining ticking down global variable\n// sp8 time setting for zone, stored in file\n\n\n// store in file to survive restart\nflow.set(\"s3\", msg.payload, \"storeInFile\");\n\n\n// store in global for calculations\nglobal.set(\"sp3\",msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 620,
-        "y": 940,
+        "x": 660,
+        "y": 880,
         "wires": [
             []
         ]
@@ -1835,8 +1917,8 @@
         "func": "var g = global.get(\"sp3\") + 1;\nglobal.set(\"sp3Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 1060,
+        "x": 1490,
+        "y": 1080,
         "wires": [
             [
                 "6e3195a8.f567ac"
@@ -1851,8 +1933,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp3Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp3Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1590,
-        "y": 1100,
+        "x": 1710,
+        "y": 1120,
         "wires": [
             [
                 "905e1b28.92aa98",
@@ -1871,8 +1953,8 @@
         "func": "\nglobal.set(\"sp3Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 1100,
+        "x": 1490,
+        "y": 1120,
         "wires": [
             [
                 "6e3195a8.f567ac"
@@ -1883,12 +1965,13 @@
         "id": "8432a345.f4b13",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Get 2",
         "func": "\n\nmsg.payload = flow.get(\"s2\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
-        "y": 980,
+        "x": 330,
+        "y": 920,
         "wires": [
             [
                 "a43414d1.ced728"
@@ -1899,6 +1982,7 @@
         "id": "a43414d1.ced728",
         "type": "ui_numeric",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Time-set 2",
         "label": "Line 2 -- Set Time",
         "tooltip": "",
@@ -1913,8 +1997,8 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "x": 450,
-        "y": 980,
+        "x": 490,
+        "y": 920,
         "wires": [
             [
                 "1ac201e.fa0f2fe"
@@ -1939,8 +2023,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 1160,
+        "x": 1250,
+        "y": 1180,
         "wires": [
             [
                 "638955b8.c9e43c"
@@ -1965,8 +2049,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 1200,
+        "x": 1250,
+        "y": 1220,
         "wires": [
             [
                 "be3a7de3.0d884"
@@ -1985,20 +2069,21 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1770,
-        "y": 1200,
+        "x": 1890,
+        "y": 1220,
         "wires": []
     },
     {
         "id": "1ac201e.fa0f2fe",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Store 2",
         "func": "// sp8Remaining ticking down global variable\n// sp8 time setting for zone, stored in file\n\n\n// store in file to survive restart\nflow.set(\"s2\", msg.payload, \"storeInFile\");\n\n\n// store in global for calculations\nglobal.set(\"sp2\",msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 620,
-        "y": 980,
+        "x": 660,
+        "y": 920,
         "wires": [
             []
         ]
@@ -2011,8 +2096,8 @@
         "func": "var g = global.get(\"sp2\") + 1;\nglobal.set(\"sp2Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 1160,
+        "x": 1490,
+        "y": 1180,
         "wires": [
             [
                 "2cd6ee9e.ba7d72"
@@ -2027,8 +2112,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp2Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp2Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1590,
-        "y": 1200,
+        "x": 1710,
+        "y": 1220,
         "wires": [
             [
                 "352f886a.199148",
@@ -2047,8 +2132,8 @@
         "func": "\nglobal.set(\"sp2Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 1200,
+        "x": 1490,
+        "y": 1220,
         "wires": [
             [
                 "2cd6ee9e.ba7d72"
@@ -2059,12 +2144,13 @@
         "id": "2e815779.ac9958",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Get 1",
         "func": "\n\nmsg.payload = flow.get(\"s1\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
-        "y": 1020,
+        "x": 330,
+        "y": 960,
         "wires": [
             [
                 "1ffc571f.6e6f49"
@@ -2075,6 +2161,7 @@
         "id": "1ffc571f.6e6f49",
         "type": "ui_numeric",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Time-set 1",
         "label": "Line 1 -- Set Time",
         "tooltip": "",
@@ -2089,8 +2176,8 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "x": 450,
-        "y": 1020,
+        "x": 490,
+        "y": 960,
         "wires": [
             [
                 "b9b9d9d6.e572e8"
@@ -2115,8 +2202,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 1260,
+        "x": 1250,
+        "y": 1280,
         "wires": [
             [
                 "22cf01dc.23ad4e"
@@ -2141,8 +2228,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 1300,
+        "x": 1250,
+        "y": 1320,
         "wires": [
             [
                 "74597fe0.1fa9c"
@@ -2161,20 +2248,21 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1770,
-        "y": 1300,
+        "x": 1890,
+        "y": 1320,
         "wires": []
     },
     {
         "id": "b9b9d9d6.e572e8",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Store 1",
         "func": "// sp8Remaining ticking down global variable\n// sp8 time setting for zone, stored in file\n\n\n// store in file to survive restart\nflow.set(\"s1\", msg.payload, \"storeInFile\");\n\n\n// store in global for calculations\nglobal.set(\"sp1\",msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 620,
-        "y": 1020,
+        "x": 660,
+        "y": 960,
         "wires": [
             []
         ]
@@ -2187,8 +2275,8 @@
         "func": "var g = global.get(\"sp1\") + 1;\nglobal.set(\"sp1Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 1260,
+        "x": 1490,
+        "y": 1280,
         "wires": [
             [
                 "b95c3244.9bf3c"
@@ -2203,8 +2291,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp1Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp1Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1590,
-        "y": 1300,
+        "x": 1710,
+        "y": 1320,
         "wires": [
             [
                 "9a5a8463.fdc728",
@@ -2223,8 +2311,8 @@
         "func": "\nglobal.set(\"sp1Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1370,
-        "y": 1300,
+        "x": 1490,
+        "y": 1320,
         "wires": [
             [
                 "b95c3244.9bf3c"
@@ -2236,15 +2324,15 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "10:00 pm start",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "01 22 * * *",
         "once": false,
         "onceDelay": 0.1,
-        "x": 840,
-        "y": 460,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 480,
         "wires": [
             [
                 "14331406.2338dc"
@@ -2255,6 +2343,7 @@
         "id": "c5f2f2db.76537",
         "type": "ui_template",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "group": "8e3f3444.167218",
         "name": "Settings Link",
         "order": 1,
@@ -2266,7 +2355,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 150,
-        "y": 1120,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -2276,15 +2365,15 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "10:30 pm start",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "30 22 * * *",
         "once": false,
         "onceDelay": 0.1,
-        "x": 840,
-        "y": 560,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 580,
         "wires": [
             [
                 "8211aa94.51c548"
@@ -2296,15 +2385,15 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "11:00 pm start",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "01 23 * * *",
         "once": false,
         "onceDelay": 0.1,
-        "x": 840,
-        "y": 660,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 680,
         "wires": [
             [
                 "53ec88a7.217958"
@@ -2316,15 +2405,15 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "11:30 pm start",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "30 23 * * *",
         "once": false,
         "onceDelay": 0.1,
-        "x": 840,
-        "y": 760,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 780,
         "wires": [
             [
                 "d4335ba.6fbb8a8"
@@ -2336,15 +2425,15 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "2:00 am start",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "01 02 * * *",
         "once": false,
         "onceDelay": 0.1,
-        "x": 840,
-        "y": 960,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 980,
         "wires": [
             [
                 "989ceb8c.ce5698"
@@ -2356,15 +2445,15 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "2:30am start",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "30 02 * * *",
         "once": false,
         "onceDelay": 0.1,
-        "x": 840,
-        "y": 1060,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 1080,
         "wires": [
             [
                 "94a0d922.875fb8"
@@ -2376,15 +2465,15 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "3:30 am start",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "30 03 * * *",
         "once": false,
         "onceDelay": 0.1,
-        "x": 840,
-        "y": 1260,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 1280,
         "wires": [
             [
                 "58888c35.0e1af4"
@@ -2396,15 +2485,15 @@
         "type": "inject",
         "z": "f25cd622.40f3a8",
         "name": "3:00 am start",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "01 03 * * *",
         "once": false,
         "onceDelay": 0.1,
-        "x": 840,
-        "y": 1160,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 1180,
         "wires": [
             [
                 "d61b25bf.3d7598"
@@ -2415,6 +2504,7 @@
         "id": "14449d0b.6843f3",
         "type": "ui_switch",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Run Program",
         "label": "Run Watering Program",
         "tooltip": "Turn on automatic watering",
@@ -2434,8 +2524,8 @@
         "offvalueType": "num",
         "officon": "",
         "offcolor": "",
-        "x": 450,
-        "y": 1100,
+        "x": 490,
+        "y": 1040,
         "wires": [
             [
                 "cdad58ab.f86cb8",
@@ -2447,6 +2537,7 @@
         "id": "e32786ae.3d2f18",
         "type": "ui_led",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "group": "8e3f3444.167218",
         "order": 3,
         "width": "1",
@@ -2468,20 +2559,21 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 610,
-        "y": 1120,
+        "x": 650,
+        "y": 1060,
         "wires": []
     },
     {
         "id": "ed15e7db.d3e488",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Get rp",
         "func": "\n\nmsg.payload = flow.get(\"rp\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
-        "y": 1100,
+        "x": 330,
+        "y": 1040,
         "wires": [
             [
                 "14449d0b.6843f3"
@@ -2492,12 +2584,13 @@
         "id": "cdad58ab.f86cb8",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
         "name": "Store 1",
         "func": "// rp is run program variable\n\n\n\n// store in file to survive restart\nflow.set(\"rp\", msg.payload, \"storeInFile\");\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 620,
-        "y": 1080,
+        "x": 660,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -2510,8 +2603,8 @@
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    \n    msg.payload = check // for debugging\n    \n    return msg;\n    \n}\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 990,
-        "y": 460,
+        "x": 1110,
+        "y": 480,
         "wires": [
             [
                 "f9a025d.71aa9d8",
@@ -2527,8 +2620,8 @@
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 990,
-        "y": 560,
+        "x": 1110,
+        "y": 580,
         "wires": [
             [
                 "d7e9a708.ea3188"
@@ -2543,8 +2636,8 @@
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 990,
-        "y": 660,
+        "x": 1110,
+        "y": 680,
         "wires": [
             [
                 "dffd532c.94cb5"
@@ -2559,8 +2652,8 @@
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 990,
-        "y": 760,
+        "x": 1110,
+        "y": 780,
         "wires": [
             [
                 "b3b8a19e.b9511"
@@ -2575,8 +2668,8 @@
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 990,
-        "y": 960,
+        "x": 1110,
+        "y": 980,
         "wires": [
             [
                 "aa7d3d0.c696ec"
@@ -2591,8 +2684,8 @@
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 990,
-        "y": 1060,
+        "x": 1110,
+        "y": 1080,
         "wires": [
             [
                 "a28c65cc.ca6018"
@@ -2607,8 +2700,8 @@
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 990,
-        "y": 1160,
+        "x": 1110,
+        "y": 1180,
         "wires": [
             [
                 "5d547efb.485e"
@@ -2623,8 +2716,8 @@
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 990,
-        "y": 1260,
+        "x": 1110,
+        "y": 1280,
         "wires": [
             [
                 "8d8a5d7a.6100e"
@@ -2641,8 +2734,30 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 1160,
-        "y": 380,
+        "x": 1280,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ca987a59.347478",
+        "type": "comment",
+        "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
+        "name": "Time Set Buttons",
+        "info": "",
+        "x": 140,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "e9139c8a.d31fa",
+        "type": "comment",
+        "z": "f25cd622.40f3a8",
+        "g": "95458cff.f3d7f",
+        "name": "Link to Nodes",
+        "info": "This HTML Tmplate node is just a link\nto the node view from the UI view",
+        "x": 150,
+        "y": 1020,
         "wires": []
     }
 ]
