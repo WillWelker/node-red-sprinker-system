@@ -10,14 +10,11 @@
         "id": "95458cff.f3d7f",
         "type": "group",
         "z": "f25cd622.40f3a8",
+        "name": "Set Minutes",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
+            "fill": "#ffbfbf",
             "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "color": "#000000"
         },
         "nodes": [
             "ae60ac8d.66a61",
@@ -57,6 +54,104 @@
         "y": 639,
         "w": 712,
         "h": 462
+    },
+    {
+        "id": "224b2fff.bafa7",
+        "type": "group",
+        "z": "f25cd622.40f3a8",
+        "name": "Schedule",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "9a5a8463.fdc728",
+            "33eee930.eae6a6",
+            "346ce32b.51c1ec",
+            "352f886a.199148",
+            "1efa8e39.cd2c32",
+            "905e1b28.92aa98",
+            "c8b3b04b.2363d",
+            "d4de30dc.01ea",
+            "8848239.22545e",
+            "f9a025d.71aa9d8",
+            "24787281.d7d72e",
+            "63142595.2dde8c",
+            "44bf599f.8a7778",
+            "c6780e6f.89632",
+            "a37edb59.6f3368",
+            "782c5e8c.78f3",
+            "d7e9a708.ea3188",
+            "68e66292.c70a2c",
+            "3a77538d.a4793c",
+            "de54a589.a4b5a8",
+            "773c9b69.95c0b4",
+            "f5002618.b97468",
+            "e95ea8d6.db4a58",
+            "dffd532c.94cb5",
+            "6d4079dd.0fe438",
+            "4fc8e7fb.9b5fa8",
+            "c92a09d7.7be338",
+            "e7b87641.6ab998",
+            "f38b3234.1ca",
+            "5786d088.13b6d",
+            "12409451.a9bb6c",
+            "57090061.f97ce",
+            "c0a871c4.c0632",
+            "99a1a21c.678f1",
+            "4fd2082e.681c98",
+            "b3b8a19e.b9511",
+            "aaf7a69b.18d108",
+            "c79cbdbd.dfcfa",
+            "6964673b.615bf8",
+            "fae8f340.280a5",
+            "eab7faf2.8b96e8",
+            "aa7d3d0.c696ec",
+            "f2b59a20.a3db38",
+            "6cc5272a.4160b8",
+            "d1cf668d.fdca18",
+            "9adcb962.613b48",
+            "f06bbd77.0022a",
+            "a28c65cc.ca6018",
+            "8f5bdc2.c53852",
+            "214dd717.476668",
+            "de10d37.8d4fb3",
+            "6e3195a8.f567ac",
+            "48bf5457.973b1c",
+            "5d547efb.485e",
+            "b1626690.537dc8",
+            "be339ca4.4db25",
+            "638955b8.c9e43c",
+            "2cd6ee9e.ba7d72",
+            "be3a7de3.0d884",
+            "8d8a5d7a.6100e",
+            "2423e76d.872438",
+            "76d581bf.82096",
+            "22cf01dc.23ad4e",
+            "b95c3244.9bf3c",
+            "74597fe0.1fa9c",
+            "713cc728.538538",
+            "2a6cb256.2b8c5e",
+            "77b30625.fac708",
+            "62cfaae8.d3a804",
+            "7cd738c4.8373d8",
+            "b3686d8f.60114",
+            "3b99e15e.8b290e",
+            "778ff5fc.ecc1ac",
+            "14331406.2338dc",
+            "8211aa94.51c548",
+            "53ec88a7.217958",
+            "d4335ba.6fbb8a8",
+            "989ceb8c.ce5698",
+            "94a0d922.875fb8",
+            "d61b25bf.3d7598",
+            "58888c35.0e1af4"
+        ],
+        "x": 834,
+        "y": 499,
+        "w": 1272,
+        "h": 882
     },
     {
         "id": "31d87628.4e2f2a",
@@ -312,13 +407,14 @@
         "id": "9a5a8463.fdc728",
         "type": "rpi-gpio out",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "1- garden",
         "pin": "7",
         "set": true,
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 2040,
+        "x": 1980,
         "y": 1300,
         "wires": []
     },
@@ -326,83 +422,89 @@
         "id": "33eee930.eae6a6",
         "type": "rpi-gpio out",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "7 back side",
         "pin": "18",
         "set": true,
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 2050,
-        "y": 600,
+        "x": 1990,
+        "y": 700,
         "wires": []
     },
     {
         "id": "346ce32b.51c1ec",
         "type": "rpi-gpio out",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "8- swing set",
         "pin": "22",
         "set": true,
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 2050,
-        "y": 500,
+        "x": 1990,
+        "y": 600,
         "wires": []
     },
     {
         "id": "352f886a.199148",
         "type": "rpi-gpio out",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "2 below garden",
         "pin": "11",
         "set": true,
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 2060,
-        "y": 1140,
+        "x": 2000,
+        "y": 1200,
         "wires": []
     },
     {
         "id": "1efa8e39.cd2c32",
         "type": "rpi-gpio out",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "6 east house",
         "pin": "16",
         "set": true,
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 2050,
-        "y": 700,
+        "x": 1990,
+        "y": 800,
         "wires": []
     },
     {
         "id": "905e1b28.92aa98",
         "type": "rpi-gpio out",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "3 bad line",
         "pin": "13",
         "set": true,
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 2040,
-        "y": 1040,
+        "x": 1980,
+        "y": 1100,
         "wires": []
     },
     {
         "id": "c8b3b04b.2363d",
         "type": "rpi-gpio out",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "4 patio",
         "pin": "15",
         "set": true,
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 2030,
+        "x": 1970,
         "y": 1000,
         "wires": []
     },
@@ -410,14 +512,15 @@
         "id": "d4de30dc.01ea",
         "type": "rpi-gpio out",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "5 hose line",
         "pin": "12",
         "set": true,
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 2050,
-        "y": 800,
+        "x": 1990,
+        "y": 900,
         "wires": []
     },
     {
@@ -451,6 +554,7 @@
         "id": "8848239.22545e",
         "type": "ui_text",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "ff5079fd.0a64f8",
         "order": 4,
         "width": "5",
@@ -459,14 +563,15 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1890,
-        "y": 520,
+        "x": 1830,
+        "y": 640,
         "wires": []
     },
     {
         "id": "f9a025d.71aa9d8",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Start 8",
         "group": "ff5079fd.0a64f8",
         "order": 2,
@@ -482,7 +587,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1250,
-        "y": 480,
+        "y": 580,
         "wires": [
             [
                 "24787281.d7d72e"
@@ -493,12 +598,13 @@
         "id": "24787281.d7d72e",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "8 Remaining Set",
         "func": "var g = global.get(\"sp8\") + 1;\nglobal.set(\"sp8Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
-        "y": 480,
+        "x": 1430,
+        "y": 580,
         "wires": [
             [
                 "63142595.2dde8c"
@@ -509,12 +615,13 @@
         "id": "63142595.2dde8c",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "8 Remaining Minus",
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp8Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp8Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1710,
-        "y": 520,
+        "x": 1650,
+        "y": 620,
         "wires": [
             [
                 "44bf599f.8a7778",
@@ -536,7 +643,7 @@
         "timer": "",
         "oldrc": false,
         "name": "Remove old",
-        "x": 1450,
+        "x": 1370,
         "y": 80,
         "wires": [
             [
@@ -556,7 +663,7 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 650,
+        "x": 610,
         "y": 80,
         "wires": []
     },
@@ -572,7 +679,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1270,
+        "x": 1190,
         "y": 80,
         "wires": [
             [
@@ -591,7 +698,7 @@
         "timer": "",
         "oldrc": false,
         "name": "move currant",
-        "x": 1620,
+        "x": 1540,
         "y": 80,
         "wires": [
             [],
@@ -605,7 +712,7 @@
         "z": "f25cd622.40f3a8",
         "name": "Backup - remove old Motion Files",
         "info": "This deletes all images and video in\n/var/lib/motion/old/ and then moves all\ncurrant files from /var/lib/motion/\nto the old directory.\nNow set to run each Monday.\n",
-        "x": 1420,
+        "x": 1340,
         "y": 40,
         "wires": []
     },
@@ -654,7 +761,7 @@
         "timer": "",
         "oldrc": false,
         "name": "REBOOT",
-        "x": 1040,
+        "x": 1000,
         "y": 80,
         "wires": [
             [],
@@ -693,7 +800,7 @@
         "timer": "",
         "oldrc": false,
         "name": "Git",
-        "x": 410,
+        "x": 370,
         "y": 80,
         "wires": [
             [
@@ -719,7 +826,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 860,
+        "x": 820,
         "y": 80,
         "wires": [
             [
@@ -731,6 +838,7 @@
         "id": "44bf599f.8a7778",
         "type": "ui_led",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "ff5079fd.0a64f8",
         "order": 5,
         "width": "1",
@@ -752,8 +860,8 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2190,
-        "y": 480,
+        "x": 1810,
+        "y": 580,
         "wires": []
     },
     {
@@ -798,6 +906,7 @@
         "id": "c6780e6f.89632",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "1 minute inject",
         "repeat": "60",
         "crontab": "",
@@ -806,8 +915,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1480,
-        "y": 900,
+        "x": 1440,
+        "y": 540,
         "wires": [
             [
                 "63142595.2dde8c",
@@ -825,6 +934,7 @@
         "id": "a37edb59.6f3368",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Stop 8",
         "group": "ff5079fd.0a64f8",
         "order": 3,
@@ -840,7 +950,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1250,
-        "y": 520,
+        "y": 620,
         "wires": [
             [
                 "782c5e8c.78f3"
@@ -851,12 +961,13 @@
         "id": "782c5e8c.78f3",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "8 Remaining Stop",
         "func": "\nglobal.set(\"sp8Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
-        "y": 520,
+        "x": 1430,
+        "y": 620,
         "wires": [
             [
                 "63142595.2dde8c"
@@ -911,6 +1022,7 @@
         "id": "d7e9a708.ea3188",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Start 7",
         "group": "29239368.3d0aec",
         "order": 2,
@@ -926,7 +1038,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1250,
-        "y": 580,
+        "y": 680,
         "wires": [
             [
                 "773c9b69.95c0b4"
@@ -937,6 +1049,7 @@
         "id": "68e66292.c70a2c",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Stop 7",
         "group": "29239368.3d0aec",
         "order": 3,
@@ -952,7 +1065,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1250,
-        "y": 620,
+        "y": 720,
         "wires": [
             [
                 "e95ea8d6.db4a58"
@@ -963,6 +1076,7 @@
         "id": "3a77538d.a4793c",
         "type": "ui_text",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "29239368.3d0aec",
         "order": 4,
         "width": "5",
@@ -971,14 +1085,15 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1890,
-        "y": 620,
+        "x": 1830,
+        "y": 740,
         "wires": []
     },
     {
         "id": "de54a589.a4b5a8",
         "type": "ui_led",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "29239368.3d0aec",
         "order": 5,
         "width": "1",
@@ -1000,8 +1115,8 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2190,
-        "y": 580,
+        "x": 1810,
+        "y": 680,
         "wires": []
     },
     {
@@ -1023,12 +1138,13 @@
         "id": "773c9b69.95c0b4",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "7 Remaining Set",
         "func": "var g = global.get(\"sp7\") + 1;\nglobal.set(\"sp7Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
-        "y": 580,
+        "x": 1430,
+        "y": 680,
         "wires": [
             [
                 "f5002618.b97468"
@@ -1039,12 +1155,13 @@
         "id": "f5002618.b97468",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "7 Remaining Minus",
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp7Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp7Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1710,
-        "y": 620,
+        "x": 1650,
+        "y": 720,
         "wires": [
             [
                 "de54a589.a4b5a8",
@@ -1059,12 +1176,13 @@
         "id": "e95ea8d6.db4a58",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "7 Remaining Stop",
         "func": "\nglobal.set(\"sp7Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
-        "y": 620,
+        "x": 1430,
+        "y": 720,
         "wires": [
             [
                 "f5002618.b97468"
@@ -1119,6 +1237,7 @@
         "id": "dffd532c.94cb5",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Start 6",
         "group": "38beea6e.3c2ab6",
         "order": 2,
@@ -1134,7 +1253,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1250,
-        "y": 680,
+        "y": 780,
         "wires": [
             [
                 "e7b87641.6ab998"
@@ -1145,6 +1264,7 @@
         "id": "6d4079dd.0fe438",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Stop 6",
         "group": "38beea6e.3c2ab6",
         "order": 3,
@@ -1160,7 +1280,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1250,
-        "y": 720,
+        "y": 820,
         "wires": [
             [
                 "5786d088.13b6d"
@@ -1171,6 +1291,7 @@
         "id": "4fc8e7fb.9b5fa8",
         "type": "ui_text",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "38beea6e.3c2ab6",
         "order": 4,
         "width": "5",
@@ -1179,14 +1300,15 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1890,
-        "y": 720,
+        "x": 1830,
+        "y": 840,
         "wires": []
     },
     {
         "id": "c92a09d7.7be338",
         "type": "ui_led",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "38beea6e.3c2ab6",
         "order": 5,
         "width": "1",
@@ -1208,8 +1330,8 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2190,
-        "y": 680,
+        "x": 1810,
+        "y": 780,
         "wires": []
     },
     {
@@ -1231,12 +1353,13 @@
         "id": "e7b87641.6ab998",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "6 Remaining Set",
         "func": "var g = global.get(\"sp6\") + 1;\nglobal.set(\"sp6Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
-        "y": 680,
+        "x": 1430,
+        "y": 780,
         "wires": [
             [
                 "f38b3234.1ca"
@@ -1247,12 +1370,13 @@
         "id": "f38b3234.1ca",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "6 Remaining Minus",
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp6Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp6Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1710,
-        "y": 720,
+        "x": 1650,
+        "y": 820,
         "wires": [
             [
                 "c92a09d7.7be338",
@@ -1267,12 +1391,13 @@
         "id": "5786d088.13b6d",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "6 Remaining Stop",
         "func": "\nglobal.set(\"sp6Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
-        "y": 720,
+        "x": 1430,
+        "y": 820,
         "wires": [
             [
                 "f38b3234.1ca"
@@ -1283,6 +1408,7 @@
         "id": "12409451.a9bb6c",
         "type": "ui_led",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "7c950725.f616a8",
         "order": 5,
         "width": "1",
@@ -1304,14 +1430,15 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2190,
-        "y": 780,
+        "x": 1810,
+        "y": 880,
         "wires": []
     },
     {
         "id": "57090061.f97ce",
         "type": "ui_led",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "7d0c2b21.9504a4",
         "order": 5,
         "width": "1",
@@ -1333,7 +1460,7 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2190,
+        "x": 1810,
         "y": 980,
         "wires": []
     },
@@ -1341,6 +1468,7 @@
         "id": "c0a871c4.c0632",
         "type": "ui_led",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "4a372ec2.fb922",
         "order": 5,
         "width": "1",
@@ -1362,14 +1490,15 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2190,
-        "y": 1120,
+        "x": 1810,
+        "y": 1080,
         "wires": []
     },
     {
         "id": "99a1a21c.678f1",
         "type": "ui_led",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "da27fc66.7cdb9",
         "order": 5,
         "width": "1",
@@ -1391,14 +1520,15 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2190,
-        "y": 1120,
+        "x": 1810,
+        "y": 1180,
         "wires": []
     },
     {
         "id": "4fd2082e.681c98",
         "type": "ui_led",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "6feae7e8.762c38",
         "order": 5,
         "width": "1",
@@ -1420,7 +1550,7 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "LED",
-        "x": 2150,
+        "x": 1810,
         "y": 1280,
         "wires": []
     },
@@ -1472,6 +1602,7 @@
         "id": "b3b8a19e.b9511",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Start 5",
         "group": "7c950725.f616a8",
         "order": 2,
@@ -1487,7 +1618,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1250,
-        "y": 780,
+        "y": 880,
         "wires": [
             [
                 "6964673b.615bf8"
@@ -1498,6 +1629,7 @@
         "id": "aaf7a69b.18d108",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Stop 5",
         "group": "7c950725.f616a8",
         "order": 3,
@@ -1513,7 +1645,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1250,
-        "y": 820,
+        "y": 920,
         "wires": [
             [
                 "eab7faf2.8b96e8"
@@ -1524,6 +1656,7 @@
         "id": "c79cbdbd.dfcfa",
         "type": "ui_text",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "7c950725.f616a8",
         "order": 4,
         "width": "5",
@@ -1532,8 +1665,8 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1890,
-        "y": 820,
+        "x": 1830,
+        "y": 940,
         "wires": []
     },
     {
@@ -1555,12 +1688,13 @@
         "id": "6964673b.615bf8",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "5 Remaining Set",
         "func": "var g = global.get(\"sp5\") + 1;\nglobal.set(\"sp5Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
-        "y": 780,
+        "x": 1430,
+        "y": 880,
         "wires": [
             [
                 "fae8f340.280a5"
@@ -1571,12 +1705,13 @@
         "id": "fae8f340.280a5",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "5 Remaining Minus",
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp5Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp5Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1710,
-        "y": 820,
+        "x": 1650,
+        "y": 920,
         "wires": [
             [
                 "12409451.a9bb6c",
@@ -1591,12 +1726,13 @@
         "id": "eab7faf2.8b96e8",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "5 Remaining Stop",
         "func": "\nglobal.set(\"sp5Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
-        "y": 820,
+        "x": 1430,
+        "y": 920,
         "wires": [
             [
                 "fae8f340.280a5"
@@ -1651,6 +1787,7 @@
         "id": "aa7d3d0.c696ec",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Start 4",
         "group": "7d0c2b21.9504a4",
         "order": 2,
@@ -1677,6 +1814,7 @@
         "id": "f2b59a20.a3db38",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Stop 4",
         "group": "7d0c2b21.9504a4",
         "order": 3,
@@ -1703,6 +1841,7 @@
         "id": "6cc5272a.4160b8",
         "type": "ui_text",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "7d0c2b21.9504a4",
         "order": 4,
         "width": "5",
@@ -1711,8 +1850,8 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1890,
-        "y": 1020,
+        "x": 1830,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1734,11 +1873,12 @@
         "id": "d1cf668d.fdca18",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "4 Remaining Set",
         "func": "var g = global.get(\"sp4\") + 1;\nglobal.set(\"sp4Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1480,
+        "x": 1420,
         "y": 980,
         "wires": [
             [
@@ -1750,11 +1890,12 @@
         "id": "9adcb962.613b48",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "4 Remaining Minus",
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp4Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp4Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1710,
+        "x": 1650,
         "y": 1020,
         "wires": [
             [
@@ -1770,11 +1911,12 @@
         "id": "f06bbd77.0022a",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "4 Remaining Stop",
         "func": "\nglobal.set(\"sp4Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
+        "x": 1430,
         "y": 1020,
         "wires": [
             [
@@ -1830,6 +1972,7 @@
         "id": "a28c65cc.ca6018",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Start 3",
         "group": "4a372ec2.fb922",
         "order": 2,
@@ -1856,6 +1999,7 @@
         "id": "8f5bdc2.c53852",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Stop 3",
         "group": "4a372ec2.fb922",
         "order": 3,
@@ -1882,6 +2026,7 @@
         "id": "214dd717.476668",
         "type": "ui_text",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "4a372ec2.fb922",
         "order": 4,
         "width": "5",
@@ -1890,8 +2035,8 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1890,
-        "y": 1120,
+        "x": 1830,
+        "y": 1140,
         "wires": []
     },
     {
@@ -1913,11 +2058,12 @@
         "id": "de10d37.8d4fb3",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "3 Remaining Set",
         "func": "var g = global.get(\"sp3\") + 1;\nglobal.set(\"sp3Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
+        "x": 1430,
         "y": 1080,
         "wires": [
             [
@@ -1929,11 +2075,12 @@
         "id": "6e3195a8.f567ac",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "3 Remaining Minus",
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp3Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp3Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1710,
+        "x": 1650,
         "y": 1120,
         "wires": [
             [
@@ -1949,11 +2096,12 @@
         "id": "48bf5457.973b1c",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "3 Remaining Stop",
         "func": "\nglobal.set(\"sp3Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
+        "x": 1430,
         "y": 1120,
         "wires": [
             [
@@ -2009,6 +2157,7 @@
         "id": "5d547efb.485e",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Start 2",
         "group": "da27fc66.7cdb9",
         "order": 2,
@@ -2035,6 +2184,7 @@
         "id": "b1626690.537dc8",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Stop 2",
         "group": "da27fc66.7cdb9",
         "order": 3,
@@ -2061,6 +2211,7 @@
         "id": "be339ca4.4db25",
         "type": "ui_text",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "da27fc66.7cdb9",
         "order": 4,
         "width": "5",
@@ -2069,8 +2220,8 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1890,
-        "y": 1220,
+        "x": 1830,
+        "y": 1240,
         "wires": []
     },
     {
@@ -2092,11 +2243,12 @@
         "id": "638955b8.c9e43c",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "2 Remaining Set",
         "func": "var g = global.get(\"sp2\") + 1;\nglobal.set(\"sp2Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
+        "x": 1430,
         "y": 1180,
         "wires": [
             [
@@ -2108,11 +2260,12 @@
         "id": "2cd6ee9e.ba7d72",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "2 Remaining Minus",
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp2Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp2Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1710,
+        "x": 1650,
         "y": 1220,
         "wires": [
             [
@@ -2128,11 +2281,12 @@
         "id": "be3a7de3.0d884",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "2 Remaining Stop",
         "func": "\nglobal.set(\"sp2Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
+        "x": 1430,
         "y": 1220,
         "wires": [
             [
@@ -2188,6 +2342,7 @@
         "id": "8d8a5d7a.6100e",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Start 1",
         "group": "6feae7e8.762c38",
         "order": 2,
@@ -2214,6 +2369,7 @@
         "id": "2423e76d.872438",
         "type": "ui_button",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Stop 1",
         "group": "6feae7e8.762c38",
         "order": 3,
@@ -2240,6 +2396,7 @@
         "id": "76d581bf.82096",
         "type": "ui_text",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "group": "6feae7e8.762c38",
         "order": 4,
         "width": "5",
@@ -2248,8 +2405,8 @@
         "label": "Time Remaining",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1890,
-        "y": 1320,
+        "x": 1830,
+        "y": 1340,
         "wires": []
     },
     {
@@ -2271,11 +2428,12 @@
         "id": "22cf01dc.23ad4e",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "1 Remaining Set",
         "func": "var g = global.get(\"sp1\") + 1;\nglobal.set(\"sp1Remaining\",g);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
+        "x": 1430,
         "y": 1280,
         "wires": [
             [
@@ -2287,11 +2445,12 @@
         "id": "b95c3244.9bf3c",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "1 Remaining Minus",
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp1Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp1Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1710,
+        "x": 1650,
         "y": 1320,
         "wires": [
             [
@@ -2307,11 +2466,12 @@
         "id": "74597fe0.1fa9c",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "1 Remaining Stop",
         "func": "\nglobal.set(\"sp1Remaining\", 0);\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
+        "x": 1430,
         "y": 1320,
         "wires": [
             [
@@ -2323,6 +2483,7 @@
         "id": "713cc728.538538",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "10:00 pm start",
         "repeat": "",
         "crontab": "01 22 * * *",
@@ -2332,7 +2493,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 960,
-        "y": 480,
+        "y": 580,
         "wires": [
             [
                 "14331406.2338dc"
@@ -2364,6 +2525,7 @@
         "id": "2a6cb256.2b8c5e",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "10:30 pm start",
         "repeat": "",
         "crontab": "30 22 * * *",
@@ -2373,7 +2535,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 960,
-        "y": 580,
+        "y": 680,
         "wires": [
             [
                 "8211aa94.51c548"
@@ -2384,6 +2546,7 @@
         "id": "77b30625.fac708",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "11:00 pm start",
         "repeat": "",
         "crontab": "01 23 * * *",
@@ -2393,7 +2556,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 960,
-        "y": 680,
+        "y": 780,
         "wires": [
             [
                 "53ec88a7.217958"
@@ -2404,6 +2567,7 @@
         "id": "62cfaae8.d3a804",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "11:30 pm start",
         "repeat": "",
         "crontab": "30 23 * * *",
@@ -2413,7 +2577,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 960,
-        "y": 780,
+        "y": 880,
         "wires": [
             [
                 "d4335ba.6fbb8a8"
@@ -2424,6 +2588,7 @@
         "id": "7cd738c4.8373d8",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "2:00 am start",
         "repeat": "",
         "crontab": "01 02 * * *",
@@ -2444,6 +2609,7 @@
         "id": "b3686d8f.60114",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "2:30am start",
         "repeat": "",
         "crontab": "30 02 * * *",
@@ -2464,6 +2630,7 @@
         "id": "3b99e15e.8b290e",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "3:30 am start",
         "repeat": "",
         "crontab": "30 03 * * *",
@@ -2484,6 +2651,7 @@
         "id": "778ff5fc.ecc1ac",
         "type": "inject",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "3:00 am start",
         "repeat": "",
         "crontab": "01 03 * * *",
@@ -2599,16 +2767,16 @@
         "id": "14331406.2338dc",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Get rp",
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    \n    msg.payload = check // for debugging\n    \n    return msg;\n    \n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "x": 1110,
-        "y": 480,
+        "y": 580,
         "wires": [
             [
-                "f9a025d.71aa9d8",
-                "b105ea29.7a6058"
+                "f9a025d.71aa9d8"
             ]
         ]
     },
@@ -2616,12 +2784,13 @@
         "id": "8211aa94.51c548",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Get rp",
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1110,
-        "y": 580,
+        "y": 680,
         "wires": [
             [
                 "d7e9a708.ea3188"
@@ -2632,12 +2801,13 @@
         "id": "53ec88a7.217958",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Get rp",
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1110,
-        "y": 680,
+        "y": 780,
         "wires": [
             [
                 "dffd532c.94cb5"
@@ -2648,12 +2818,13 @@
         "id": "d4335ba.6fbb8a8",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Get rp",
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1110,
-        "y": 780,
+        "y": 880,
         "wires": [
             [
                 "b3b8a19e.b9511"
@@ -2664,6 +2835,7 @@
         "id": "989ceb8c.ce5698",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Get rp",
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
@@ -2680,6 +2852,7 @@
         "id": "94a0d922.875fb8",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Get rp",
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
@@ -2696,6 +2869,7 @@
         "id": "d61b25bf.3d7598",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Get rp",
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
@@ -2712,6 +2886,7 @@
         "id": "58888c35.0e1af4",
         "type": "function",
         "z": "f25cd622.40f3a8",
+        "g": "224b2fff.bafa7",
         "name": "Get rp",
         "func": "\n\nvar check = flow.get(\"rp\", \"storeInFile\");\n\nif (check === 1) {\n    //if check = 1 then return meassage to run sprinkler\n    return msg;\n    \n}\n\nreturn msg;",
         "outputs": 1,
@@ -2723,20 +2898,6 @@
                 "8d8a5d7a.6100e"
             ]
         ]
-    },
-    {
-        "id": "b105ea29.7a6058",
-        "type": "debug",
-        "z": "f25cd622.40f3a8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 1280,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "ca987a59.347478",
