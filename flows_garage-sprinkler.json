@@ -620,6 +620,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp8Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp8Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 1650,
         "y": 620,
         "wires": [
@@ -1160,6 +1162,8 @@
         "func": "\nvar msg2 = {};\nvar r = global.get(\"sp7Remaining\");\n\n\nif (r > 0) {\n    r -= 1;\n    \n    msg.payload = 0;\n    }\n    \n    \nif (r < 1) {\n     msg.payload = 1;\n     \n    }\n    \nglobal.set(\"sp7Remaining\",r)  \nmsg2.payload = r;\n\n\nreturn [msg, msg2];\n\n\n",
         "outputs": 2,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 1650,
         "y": 720,
         "wires": [
@@ -2954,7 +2958,150 @@
         "x": 940,
         "y": 420,
         "wires": [
-            []
+            [
+                "f4ac29ed.bffa38"
+            ]
+        ]
+    },
+    {
+        "id": "f4ac29ed.bffa38",
+        "type": "function",
+        "z": "f25cd622.40f3a8",
+        "name": "",
+        "func": "\n\nvar d = new Date();\nvar cool = global.get(\"cool\");\nvar h = d.getHours();\nmsg.payload = cool;\n\nif ( h > 9 && h < 17 && cool === 1 ) {\n   return msg; \n}\n\n\n  \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1120,
+        "y": 420,
+        "wires": [
+            [
+                "d1abc158.9f3e",
+                "d7e9a708.ea3188"
+            ]
+        ]
+    },
+    {
+        "id": "d1abc158.9f3e",
+        "type": "debug",
+        "z": "f25cd622.40f3a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1490,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1d3a1a9b.50f645",
+        "type": "ui_led",
+        "z": "f25cd622.40f3a8",
+        "group": "29239368.3d0aec",
+        "order": 7,
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "green",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "COOL LED",
+        "x": 2530,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c4315b03.dc8868",
+        "type": "ui_switch",
+        "z": "f25cd622.40f3a8",
+        "name": "COOL",
+        "label": "COOL",
+        "tooltip": "Turn on automatic watering",
+        "group": "29239368.3d0aec",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 2190,
+        "y": 740,
+        "wires": [
+            [
+                "79bc9171.43523"
+            ]
+        ]
+    },
+    {
+        "id": "79bc9171.43523",
+        "type": "function",
+        "z": "f25cd622.40f3a8",
+        "name": "",
+        "func": "\n\nglobal.set(\"cool\", msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 2340,
+        "y": 740,
+        "wires": [
+            [
+                "1d3a1a9b.50f645"
+            ]
+        ]
+    },
+    {
+        "id": "c67f5c87.15f22",
+        "type": "inject",
+        "z": "f25cd622.40f3a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 2220,
+        "y": 680,
+        "wires": [
+            [
+                "c4315b03.dc8868"
+            ]
         ]
     }
 ]
