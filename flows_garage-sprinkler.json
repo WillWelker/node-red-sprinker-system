@@ -724,7 +724,7 @@
         "z": "f25cd622.40f3a8",
         "g": "95458cff.f3d7f",
         "name": "Get 8",
-        "func": "\n\n",
+        "func": "\n\n\nmsg.payload = flow.get(\"s8\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is deployed.\n\nmsg.payload = flow.get(\"s8\", \"storeInFile\");\n\nreturn msg;",
@@ -746,6 +746,8 @@
         "func": "// sp8Remaining ticking down global variable\n// sp8 time setting for zone, stored in file\n\n\n// store in file to survive restart\nflow.set(\"s8\", msg.payload, \"storeInFile\");\n\n\n// store in global for calculations\nglobal.set(\"sp8\",msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 660,
         "y": 680,
         "wires": [
@@ -985,6 +987,8 @@
         "func": "\n\nmsg.payload = flow.get(\"s7\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 330,
         "y": 720,
         "wires": [
@@ -1202,6 +1206,8 @@
         "func": "\n\nmsg.payload = flow.get(\"s6\", \"storeInFile\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 330,
         "y": 760,
         "wires": [
@@ -2968,7 +2974,7 @@
         "type": "function",
         "z": "f25cd622.40f3a8",
         "name": "",
-        "func": "\n\nvar d = new Date();\nvar cool = global.get(\"cool\");\nvar h = d.getHours();\nmsg.payload = cool;\n\nif ( h > 9 && h < 17 && cool === 1 ) {\n   return msg; \n}\n\n\n  \n",
+        "func": "\n\nvar d = new Date();\nvar cool = global.get(\"cool\");\nvar h = d.getHours();\nmsg.payload = cool;\n\nif ( h > 7 && h < 17 && cool === 1 ) {\n   return msg; \n}\n\n\n  \n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2978,7 +2984,8 @@
         "wires": [
             [
                 "d1abc158.9f3e",
-                "d7e9a708.ea3188"
+                "d7e9a708.ea3188",
+                "f704c1d7.39b1e"
             ]
         ]
     },
@@ -3101,6 +3108,29 @@
         "wires": [
             [
                 "c4315b03.dc8868"
+            ]
+        ]
+    },
+    {
+        "id": "f704c1d7.39b1e",
+        "type": "delay",
+        "z": "f25cd622.40f3a8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1120,
+        "y": 460,
+        "wires": [
+            [
+                "68e66292.c70a2c"
             ]
         ]
     }
